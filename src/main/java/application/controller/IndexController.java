@@ -1,12 +1,17 @@
 package application.controller;
-
-import org.springframework.stereotype.Controller;
+import java.util.List;
+import java.util.Arrays;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+@RestController
+@RequestMapping("/")
 public class IndexController {
-    @RequestMapping("/")
-    public String home() {
-        return "home";
+
+    private List<String> frutas = Arrays.asList("Maça", "Uva", "Banana");
+    @GetMapping
+    public List<String> home() {
+        return frutas;
     }
 }
