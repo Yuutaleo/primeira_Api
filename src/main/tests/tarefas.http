@@ -1,0 +1,11 @@
+@url = http://localhost:8080/tarefas
+
+//testar com http://
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "id" : 1,
+    "descricao" : "Cabeça de gelho. Marselão" 
+}
