@@ -1,0 +1,26 @@
+@url = http://localhost:8080/alunos
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "id" : 2,
+    "nome" : "Jorge",
+    "idade" : 23 
+}
+
+###
+GET {{url}}
+
+###
+PUT {{url}}/1
+Content-Type: application/json
+
+{
+    "id" : 1,
+    "nome" : "Rogerio",
+    "idade" : 190
+}
+
+###
+DELETE {{url}}/2

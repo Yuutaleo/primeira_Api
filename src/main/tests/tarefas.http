@@ -1,7 +1,5 @@
 @url = http://localhost:8080/tarefas
 
-//testar com http://
-
 POST {{url}}
 Content-Type: application/json
 
@@ -9,3 +7,17 @@ Content-Type: application/json
     "id" : 1,
     "descricao" : "Cabeça de gelho. Marselão" 
 }
+
+###
+GET {{url}}
+
+###
+PUT {{url}}/5
+Content-Type: application/json
+
+{
+    "descricao" : "Teste Alterado"
+}
+
+###
+DELETE {{url}}/5
